@@ -3,29 +3,182 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ピコダッシュ — PicoDash</title>
+  <title>ピコダッシュ — 片手で遊べるワンタップ横スクロールランナー</title>
+  <meta name="description" content="タップで走れ、ジャンプで避けろ！毎日変わるデイリーチャレンジで世界中のプレイヤーとスコアを競おう。150種以上のきせかえパーツ、5つのステージ、ワンタップ3段ジャンプ。">
+  <meta name="keywords" content="ピコダッシュ,PicoDash,ランゲーム,横スクロール,ランナー,ワンタップ,デイリーチャレンジ,ランキング,ガチャ,きせかえ,iPhoneゲーム,無料">
   <meta name="theme-color" content="#FF2E97">
+  <link rel="canonical" href="https://naname0109.github.io/picodash-pages/">
+
+  <meta property="og:title" content="ピコダッシュ — 片手で遊べるワンタップ横スクロールランナー">
+  <meta property="og:description" content="毎日変わるコースで世界と競え！150種以上のきせかえ×3段ジャンプ×5ステージ。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naname0109.github.io/picodash-pages/">
+  <meta property="og:image" content="https://naname0109.github.io/picodash-pages/screenshots/01_gameplay.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ピコダッシュ — ワンタップ横スクロールランナー">
+  <meta name="twitter:description" content="毎日変わるコースで世界と競え！150種以上のきせかえ×3段ジャンプ。">
+  <meta name="twitter:image" content="https://naname0109.github.io/picodash-pages/screenshots/01_gameplay.png">
+
+  <meta name="apple-itunes-app" content="app-id=6779938168">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "ピコダッシュ",
+    "alternateName": "PicoDash",
+    "description": "片手で遊べるワンタップ横スクロールランナー。毎日変わるデイリーチャレンジで世界中のプレイヤーとスコアを競おう。150種以上のきせかえパーツを集めて自分だけのキャラクターを作ろう。",
+    "operatingSystem": "iOS",
+    "applicationCategory": "GameAction",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "ratingCount": "1"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Masahiro Akebi"
+    }
+  }
+  </script>
+
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; color: #E0E0E0; background: #0B0E20; margin: 0; line-height: 1.8; text-align: center; }
-    .wrap { max-width: 480px; margin: 0 auto; padding: 48px 24px 64px; }
-    h1 { font-size: 36px; color: #FF2E97; margin-bottom: 8px; }
-    .sub { color: #2BD0B6; font-size: 14px; margin-bottom: 32px; }
-    .links a { display: block; margin: 12px 0; padding: 12px 20px; border: 1px solid #FF2E97; border-radius: 12px; color: #FF2E97; text-decoration: none; font-size: 15px; transition: background 0.2s; }
-    .links a:hover { background: rgba(255,46,151,0.12); }
-    .contact { margin-top: 40px; font-size: 13px; color: #666; }
-    .contact a { color: #2BD0B6; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+      color: #E0E0E0; background: #0B0E20; line-height: 1.8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 64px 24px 48px;
+      background: linear-gradient(180deg, #0B0E20 0%, #1A1040 100%);
+    }
+    .hero h1 { font-size: 42px; color: #FF2E97; margin-bottom: 4px; letter-spacing: 2px; }
+    .hero .tagline { color: #2BD0B6; font-size: 18px; margin-bottom: 24px; }
+    .hero .desc { color: #B0B8C8; font-size: 15px; max-width: 420px; margin: 0 auto 32px; }
+    .store-badge {
+      display: inline-block; padding: 14px 32px; background: #FF2E97;
+      color: #fff; text-decoration: none; border-radius: 14px;
+      font-size: 16px; font-weight: bold; transition: opacity 0.2s;
+    }
+    .store-badge:hover { opacity: 0.85; }
+
+    .screenshots {
+      padding: 48px 16px;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      display: flex; gap: 16px; justify-content: center; flex-wrap: nowrap;
+    }
+    .screenshots img {
+      height: 480px; width: auto; border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(255,46,151,0.15); flex-shrink: 0;
+    }
+
+    .features {
+      max-width: 640px; margin: 0 auto; padding: 48px 24px;
+    }
+    .features h2 {
+      color: #FF2E97; font-size: 22px; margin-bottom: 32px; text-align: center;
+    }
+    .feature {
+      display: flex; gap: 16px; margin-bottom: 28px; align-items: flex-start;
+    }
+    .feature .icon { font-size: 28px; flex-shrink: 0; width: 40px; text-align: center; }
+    .feature h3 { color: #2BD0B6; font-size: 16px; margin-bottom: 4px; }
+    .feature p { color: #B0B8C8; font-size: 14px; line-height: 1.7; }
+
+    .cta {
+      text-align: center; padding: 48px 24px 32px;
+      background: linear-gradient(180deg, #0B0E20 0%, #1A1040 100%);
+    }
+    .cta p { color: #B0B8C8; font-size: 15px; margin-bottom: 20px; }
+
+    footer {
+      text-align: center; padding: 32px 24px 48px; font-size: 13px; color: #666;
+    }
+    footer a { color: #2BD0B6; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { margin-bottom: 16px; }
+    .footer-links a { margin: 0 12px; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 32px; }
+      .screenshots { justify-content: flex-start; padding-left: 24px; }
+      .screenshots img { height: 380px; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>ピコダッシュ</h1>
-    <p class="sub">PicoDash — One-tap Endless Runner</p>
-    <div class="links">
-      <a href="privacy.html">プライバシーポリシー / Privacy Policy</a>
-      <a href="terms.html">利用規約 / Terms of Use</a>
-      <a href="https://github.com/naname0109/picodash-pages/issues">お問い合わせ / Contact</a>
+
+<section class="hero">
+  <h1>ピコダッシュ</h1>
+  <p class="tagline">片手で遊べるワンタップ横スクロールランナー</p>
+  <p class="desc">タップで走れ、ジャンプで避けろ！<br>毎日変わるデイリーチャレンジで、世界中のプレイヤーとスコアを競おう。</p>
+  <a href="https://apps.apple.com/jp/app/id6779938168" class="store-badge">App Store で無料ダウンロード</a>
+</section>
+
+<div class="screenshots">
+  <img src="screenshots/01_gameplay.png" alt="ピコダッシュ ゲームプレイ画面" loading="lazy">
+  <img src="screenshots/02_daily.png" alt="デイリーチャレンジ" loading="lazy">
+  <img src="screenshots/03_gacha.png" alt="150種以上のきせかえガチャ" loading="lazy">
+  <img src="screenshots/06_ranking.png" alt="世界ランキング" loading="lazy">
+</div>
+
+<section class="features">
+  <h2>ピコダッシュの特徴</h2>
+
+  <div class="feature">
+    <div class="icon">🏃</div>
+    <div>
+      <h3>ワンタップ3段ジャンプ</h3>
+      <p>操作はタップだけ。空中で最大3回ジャンプできるから、障害物を華麗にかわせます。シンプルだけど奥深い操作感。</p>
     </div>
-    <p class="contact">Developer: Masahiro Akebi / <a href="mailto:tubaki69@gmail.com">tubaki69@gmail.com</a></p>
   </div>
+
+  <div class="feature">
+    <div class="icon">📅</div>
+    <div>
+      <h3>デイリーチャレンジ</h3>
+      <p>毎日、全プレイヤーに同じコースが出題。同じ条件だから、スコアの差は純粋な腕前の差。ランキングで世界中のプレイヤーと競えます。</p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="icon">🎨</div>
+    <div>
+      <h3>150種以上のきせかえパーツ</h3>
+      <p>ゲームで稼いだコインでガチャを回して、頭・体・脚を自由に組み合わせ。すべてコスメティック（見た目だけ）で課金の有利不利はゼロ。</p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="icon">🌏</div>
+    <div>
+      <h3>5つのゾーン</h3>
+      <p>ネオンシティから凍てつく氷原まで、走るほどに変わる5つのステージ。独自の障害物とパララックス背景が待っています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <p>完全無料・広告のみ。課金で強くなる要素はありません。</p>
+  <a href="https://apps.apple.com/jp/app/id6779938168" class="store-badge">App Store で無料ダウンロード</a>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="terms.html">利用規約</a>
+    <a href="https://github.com/naname0109/picodash-pages/issues">お問い合わせ</a>
+  </div>
+  <p>Developer: Masahiro Akebi / <a href="mailto:tubaki69@gmail.com">tubaki69@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
